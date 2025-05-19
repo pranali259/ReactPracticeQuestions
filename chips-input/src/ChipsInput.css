@@ -1,0 +1,94 @@
+/* ChipsInput.css */
+
+.chips-input-container {
+  font-family: sans-serif;
+  padding: 20px;
+  /* margin auto centers block elements */
+  margin: 40px auto; /* Use margin from inline style, auto for horizontal centering */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 500px; /* Slightly adjusted max-width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+  background-color: #fff; /* Changed background to white */
+
+  /* Styles from inline container div */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Add gap for spacing between elements */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 0; /* Remove default bottom margin - gap handles spacing */
+  font-size: 1.8em;
+}
+
+.chips-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Space between chips */
+  width: 100%; /* Make chip display take full width of container */
+  min-height: 45px; /* Slightly increased min-height */
+  padding: 10px;
+  border: 1px solid #ccc; /* Slightly darker border */
+  border-radius: 5px;
+  background-color: #f8f8f8; /* Light gray background for the chip area */
+  box-sizing: border-box; /* Include padding and border in width */
+  align-content: flex-start; /* Align rows of chips to the top */
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  padding: 5px 10px; /* Adjusted padding */
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.9em;
+  gap: 5px; /* Space between chip text and button */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Subtle shadow on chips */
+  /* Styles from inline chip div (background, margin, padding, color are covered) */
+  /* Margin is replaced by gap on the .chips-display container */
+}
+
+.remove-chip-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+  font-size: 1em;
+  line-height: 1;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 50%; /* Makes hover effect round */
+}
+
+.remove-chip-btn:hover {
+  color: white; /* Solid white on hover */
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+}
+
+.chips-input-field {
+  width: 100%; /* Make input take full width of container */
+  padding: 10px 12px; /* Padding from existing CSS */
+  border: 1px solid #ccc; /* Border from existing CSS */
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  /* Styles from inline input (padding, width are covered) */
+  /* Placeholder color */
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.chips-input-field:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
